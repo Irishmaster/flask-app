@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        .data-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .data-container p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .data-container p span {
+            font-weight: bold;
+        }
+        .back-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scanned QR Code Data</h1>
+    
+    <div class="data-container">
+        <p><span>Object Name:</span> {{ data.object_name }}</p>
+        <p><span>Type of Waste:</span> {{ data.waste_type }}</p>
+        <p><span>Location:</span> {{ data.location }}</p>
+        <p><span>Current Location:</span> {{ data.current_location }}</p>
+    </div>
+    
+    <a href="/" class="back-button">Go Back</a>
+</body>
+</html>
+
+
+
+
